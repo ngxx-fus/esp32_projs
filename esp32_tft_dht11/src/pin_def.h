@@ -19,7 +19,7 @@ namespace io_pin
 {
     /// Blink led to indicate error.
     /// \param err_code error code
-    /// \note Based on your rule about error, in this function, 
+    /// @note Based on your rule about error, in this function, 
     /// the Value(err_code) is the number of times the LED will be "blink".
     /// For each "blink" period, the led will be turned off for 50ms 
     /// then on 200ms then off 50ms.

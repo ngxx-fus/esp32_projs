@@ -83,10 +83,10 @@ namespace tft_lcd{
     /// @param X  X : 0->175 (column)
     /// @param y : 0->219 (row)
     /// @param Image 16bit-array
-    /// \note Max(Size(Image)) = wxh = 176x220
-    /// \note Size(Image) >= img_w*img_h
-    /// \note Drawing direction: from top-left -> botom-right.
-    /// \note Image to 16bit-array: https:///javl.github.io/image2cpp/.
+    /// @note Max(Size(Image)) = wxh = 176x220
+    /// @note Size(Image) >= img_w*img_h
+    /// @note Drawing direction: from top-left -> botom-right.
+    /// @note Image to 16bit-array: https:///javl.github.io/image2cpp/.
     void drawImage(
         uint16_t X, uint16_t Y, 
         uint16_t* image, 
@@ -115,9 +115,9 @@ namespace tft_lcd{
     /// @param msg the msg will be printed  onto tft screen 
     /// @param text_color the color of msg, 16bit-color
     /// @param line_height the distance between to line(row)
-    /// \note  + The limit range of row: [0, 180/line_height]
-    /// \note  + The limit of msg size: 16 characters
-    /// \note  + If line_height is too small, the lines can be overlapped each other!
+    /// @note  + The limit range of row: [0, 180/line_height]
+    /// @note  + The limit of msg size: 16 characters
+    /// @note  + If line_height is too small, the lines can be overlapped each other!
     template<class T>
     void println(
         uint16_t line,
