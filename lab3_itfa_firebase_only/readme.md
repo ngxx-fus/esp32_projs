@@ -1,44 +1,44 @@
 ## Hardware Specs
 Board: DOIT ESP32 DEVKIT V1
-![pinout](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/board_pinout.png?raw=true)
+![pinout](imgs/board_pinout.png?raw=true)
 
 ## How to setup RealtimeFirebase?
 You can set-up your FirebaseRealtime in serveral steps below:
 ### Step-0 Sign-up
 Go to the [link: https://console.firebase.google.com](https://console.firebase.google.com) and login.
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image.png?raw=true)
+![img](imgs/image.png?raw=true)
 ### Step-1 Create new project
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image.png?raw=true)
+![alt text](imgs/image.png?raw=true)
 Enter your project name.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image1.png?raw=true)
+![alt text](imgs/image1.png?raw=true)
 Continue
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image3.png?raw=true)
+![alt text](imgs/image3.png?raw=true)
 Choose Default Account for Firebase
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image4.png?raw=true)
+![alt text](imgs/image4.png?raw=true)
 Wait for the process done
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image5.png?raw=true)
+![alt text](imgs/image5.png?raw=true)
 Continue
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image6.png?raw=true)
+![alt text](imgs/image6.png?raw=true)
 ### Step-2 set-up Authentication
 In the left column, click **Build** tag then choose **Authentication** tag.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image7.png?raw=true)
+![alt text](imgs/image7.png?raw=true)
 Click **Get started**
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image8.png?raw=true)
+![alt text](imgs/image8.png?raw=true)
 In tab Authentication/Sign-in method choose **Anonymous**. This option allow a anonymous user to access your Firebase resource. In the next section, i will introduce how to specify a user how can access the resource.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image9.png?raw=true)
+![alt text](imgs/image9.png?raw=true)
 Enable and save the setting.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image10.png?raw=true)
+![alt text](imgs/image10.png?raw=true)
 Oke.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image11.png?raw=true)
+![alt text](imgs/image11.png?raw=true)
 ### Step-3 set-up Realtime Database
 Back to **build** tag, choose **Realtime Database** tag then **Create Database**.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image12.png?raw=true)
+![alt text](imgs/image12.png?raw=true)
 Choose Database Center, there are some database centers for you to choose. I will choose ```us-cental1```.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image13.png?raw=true)
+![alt text](imgs/image13.png?raw=true)
 Select ***Start in locked mode*** option, then click **Enable** :v
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image14.png?raw=true)
+![alt text](imgs/image14.png?raw=true)
 OKE.
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image15.png?raw=true)
+![alt text](imgs/image15.png?raw=true)
 ### Step-4 set-up Rules
 In tag Build/Realtime Database choose **Rules** tab. This tab allow you set rules for **read** or **write** operation to your resource. For example if you set ```".read": false``` ```false``` this rule will deny any **read** operation to your resource.
 <br>To access (R\W) to your resouce for anyone: 
@@ -50,7 +50,7 @@ In tag Build/Realtime Database choose **Rules** tab. This tab allow you set rule
   }
 }
 ```
-![alt text](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image16.png?raw=true)
+![alt text](imgs/image16.png?raw=true)
 
 To access (R\W) to your resouce for a specified user using uid (optional): 
 ```
@@ -73,12 +73,12 @@ You have set-up your Realtime Firebase.
 Before go to Step-1, you must copy some credential informations.
 #### DATABASE_URL
 In tag Build/Realtime Database choose **Data** tab, then copy the URL.
-![inmg](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image17.png?raw=true)
+![inmg](imgs/image17.png?raw=true)
 #### API_KEY
 From Project Overview tag, select ⚙️ then select **Project settings**
-![inmg](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image18.png?raw=true)
+![inmg](imgs/image18.png?raw=true)
 At tab **General**, copy **Web API key**.
-![inmg](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image19.png?raw=true)
+![inmg](imgs/image19.png?raw=true)
 (This API Key in the picture will be unusable :v bcz the project will be deleted after i make this guide.)
 
 ### Step-1 install dependencies (lib)
@@ -314,7 +314,7 @@ And so on with other datatype.
 Note: If you got "ADMIN_ONLY_OPERATION" error -----> check Authentication :>
 
 Result:
-![res](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/demo.png?raw=true)
+![res](imgs/demo.png?raw=true)
 
 
 
@@ -323,28 +323,28 @@ Result:
 ## Section-2 Specified user
 ### Step-1 Set-up Authentication
 Choose **Email/Password** privider.
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image20.png?raw=true)
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image21.png?raw=true)
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image22.png?raw=true)
+![img](imgs/image20.png?raw=true)
+![img](imgs/image21.png?raw=true)
+![img](imgs/image22.png?raw=true)
 
 ### Step-2 Create Email+Password
 Go to [Service Account Website](https://console.cloud.google.com/iam-admin/serviceaccounts). Select your project and continue.
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image23.png?raw=true)
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image24.png?raw=true)
+![img](imgs/image23.png?raw=true)
+![img](imgs/image24.png?raw=true)
 Enter name
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image25.png?raw=true)
+![img](imgs/image25.png?raw=true)
 Grant this service account access to YOUR_PROJECT so that it has permission to complete specific actions on the resources in your project
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image26.png?raw=true)
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image27.png?raw=true)
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image28.png?raw=true)
+![img](imgs/image26.png?raw=true)
+![img](imgs/image27.png?raw=true)
+![img](imgs/image28.png?raw=true)
 Copy your EMAIL ADDRESS!
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image29.png?raw=true)
+![img](imgs/image29.png?raw=true)
 Back to Authentication tag, Sign-up Method tab, click **Add user**
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image30.png?raw=true)
+![img](imgs/image30.png?raw=true)
 Using Email has been created before and create new password. This user only has Editor permition.
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image31.png?raw=true)
+![img](imgs/image31.png?raw=true)
 Done.
-![img](https://github.com/ngxx-fus/ITFA/blob/main/lab3_itfa_firebase_only/imgs/image32.png?raw=true)
+![img](imgs/image32.png?raw=true)
 NOTE: Copy this UID :> (U will need it to set rule for only this user to access the resource).
 
 ### Step-3 Set-up rule
@@ -501,3 +501,4 @@ void loop(){
   delay(1000);
 }
 ```
+
